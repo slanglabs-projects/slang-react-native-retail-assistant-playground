@@ -62,6 +62,30 @@ class Main extends React.Component {
               }}>
             </Button>
           </View>
+          <View style={styles.buttonStyle}>
+            <Button
+              title="Nudge User Default"
+              onPress={() => {
+                SlangRetailAssistant.ui.nudgeUser()
+              }}>
+            </Button>
+          </View>
+          <View style={styles.buttonStyle}>
+            <Button
+              title="Nudge User With Parameters"
+              onPress={() => {
+                var title = {
+                  "en-IN": "title",
+                  "hi-IN": "शीर्षक"
+                }
+                var description = {
+                  "en-IN": "description",
+                  "hi-IN": "विवरण"
+                }
+                SlangRetailAssistant.ui.nudgeUserWithParameters(title, description)
+              }}>
+            </Button>
+          </View>
           <SlangConvaTrigger   
             style={styles.triggerStyle}
         />

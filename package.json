@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "17.0.2",
     "react-native": "0.68.1",
-    "@slanglabs/slang-conva-react-native-retail-assistant": "8.2.2"
+    "@slanglabs/slang-conva-react-native-retail-assistant": "8.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
