@@ -25,6 +25,58 @@ class Main extends React.Component {
           })
         }
       });
+      SlangRetailAssistant.setLifecycleObserver({
+        onAssistantInitSuccess: () => {
+          console.log('onAssistantInitSuccess')
+        },
+
+        onAssistantInitFailure: (error) => {
+          console.error('onAssistantInitFailure ' + error)
+        },
+
+        onAssistantInvoked: () => {
+          console.log('onAssistantInvoked')
+        },
+
+        onAssistantClosed: (isCancelled) => {
+          console.log('onAssistantClosed ' + isCancelled)
+        },
+
+        onAssistantLocaleChanged: (locale) => {
+          console.log('onAssistantLocaleChanged ' + JSON.stringify(locale, null, '\t'))
+        },
+
+        onUnrecognisedUtterance: (utterance) => {
+          console.log('onUnrecognisedUtterance ' + utterance)
+        },
+
+        onUtteranceDetected: (utterance) => {
+          console.log('onUtteranceDetected ' + utterance)
+        },
+
+        onOnboardingSuccess: () => {
+          console.log('onOnboardingSuccess')
+        },
+
+        onOnboardingFailure: () => {
+          console.log('onOnboardingFailure')
+        },
+
+        onMicPermissionDenied: () => {
+          console.log('onMicPermissionDenied')
+        },
+
+        onMicPermissionGranted: () => {
+          console.log('onMicPermissionGranted');
+        },
+
+        onCoachmarkAction: coachmarkInfo => {
+          console.log(
+            'onCoachmarkAction ' + JSON.stringify(coachmarkInfo, null, '\t'),
+          )
+        }
+      });
+
     } catch (error) {
       console.error(error);
     }
