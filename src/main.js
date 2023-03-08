@@ -25,6 +25,7 @@ class Main extends React.Component {
           })
         }
       });
+      SlangRetailAssistant.setUserId("<UserId>")
       SlangRetailAssistant.setLifecycleObserver({
         onAssistantInitSuccess: () => {
           console.log('onAssistantInitSuccess')
