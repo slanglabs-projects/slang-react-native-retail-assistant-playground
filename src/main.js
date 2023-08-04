@@ -15,7 +15,8 @@ class Main extends React.Component {
       SlangRetailAssistant.initialize({
         requestedLocales: ['en-IN', 'hi-IN'],
         assistantId: '<AssistantId>',
-        apiKey: '<APIKey>'
+        apiKey: '<APIKey>',
+        environment: 'PRODUCTION'
       });
       SlangRetailAssistant.setAction({
         onSearch: (searchInfo, searchUserJourney) => {
